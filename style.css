@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*estilo geral*/
+.flex{
+    display: flex;
+}
+
+main{
+    box-shadow: 0px 0px 20px rgba(0, 0 , 0, 0.3);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    text-align: justify;
+    height: 150vh;
+
+}
+
+.interface{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.btn-contato button{
+    color: white;
+    padding: 10px 50px ;
+    font-size: 18px;
+    font-weight: 90px;
+    background-color: rgb(0, 0, 0);
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+
+}
+ button:hover{
+    box-shadow: 0px 0px 8px rgb(86, 86, 87);
+    transition: box-shadow 0.5s ease;
+    transform: scale(1.1);
+    /* propriedades do box shadow: primeiro px= vertical, segundo px= horizontal, terceiro px= espalhamento da sombra */
+}
+
+/* ESTILO CABEÇALHO */
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header a{
+    color: rgb(190, 190, 190);
+    text-decoration: none;
+    display: inline-block;
+    transition: color 1s ease;
+    transition: .2s;
+    /* deixando a transicao de tamanho e cor mais suave e estilosa */
+
+}
+
+header nav.menu-desktop a:hover{
+    color: black;
+    transform: scale(1.2);
+    /* trasform nao funciona em li, para isso transformar em inline block */
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li{
+    display: inline-block;
+    padding: 0 90px;
+}
+
+/* Estilo DO MENU MOBILE */
+
+
+.btn-abrir-menu i{
+    color: aqua;
+    font-size: 60px;
+}
+
+.menu-mobile{
+    background-color: blue;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s ;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar{
+    color: aqua;
+    font-size: 35px;
+}
+
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #d1d1d1;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: black;
+    color: #ffffff;
+}
+
+.overlay-menu{
+    background-color: rgba(0, 0, 0, 0.185);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 8888;
+    display: none;
+    
+}
+
+/* ESTILO DO TOPO DO SITE */
+
+section.toposite{
+    padding: 40px 2%;
+}
+
+section.toposite .flex{
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.toposite h1{
+    font-size: 42px;
+}
+
+.toposite .txt-topo-site h1 span{
+    color: rgb(0, 217, 255);
+}
+
+.toposite .txt-topo-site p{
+    font-size: 1.5em;
+    margin: 10px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.toposite .txt-topo-site .btn-contato button:hover{
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+.conteudo {
+    margin: 30px 30px;
+}
+
+.toposite .img-topo-site{
+    position: relative;
+    animation: flutuar 3s ease-in-out infinite alternate;
+    /* começa suave, fica mais rapido no meio, e termina suave */
+}
+
+@keyframes flutuar {
+    0%{
+        top:-20px;
+        /* so funciona se a posicao do objeto nao for igual a static */
+    }
+    100%{
+        top: 50px;
+    }
+}
+
+/* TRABALHOS */
+section.trabalho{
+    padding: 40px 4%;
+}
+
+.trabalho h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 5px;
+}
+
+.trabalho .titulo h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trabalho .titulo h2 span{
+    color: rgb(0, 217, 250);
+    padding: 0 0 0 10px;
+}
+
+.trabalho p {
+    font-size: 20px;
+}
+
+.bloco p{
+    font-size: 20px;
+    text-align: justify;
+    margin: 20px 0;
+
+}
+
+.bloco .img-work {
+    border: 2px solid rgba(0, 0 , 0, 0.3);
+    margin: 0 0 20px 0;
+    border-radius: 50px;
+    padding: 0 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0 , 0, 0.2);
+}
+
+ .bloco {
+    padding: 20px 20%;
+}
+
+.trabalho .flex .txt-trabalho .img-work i{
+    display: flex;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color: rgb(0, 186, 214);
+
+}
+
+
+
+/* SOBRE */
+
+section.sobre{
+    padding: 40px 4%;
+}
+
+section.sobre .flex{
+    align-items:center;
+    gap: 30px;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 5px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: rgb(0, 217, 255);
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    text-align: justify;
+    margin: 20px 0;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(0, 217, 255);
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}   
+
+/* ESTILO DO PORTFOLIO */
+
+section.portfolio{
+    padding: 30px 4%;
+    box-shadow: 0 0 80px rgba(0,0, 0, 0.1);
+}
+
+section.portfolio .interface .titulo{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+
+}
+
+section.portfolio .interface .titulo span{
+    padding: 0 10px;
+    color: rgb(0, 217, 255);
+}
+
+section.portfolio .flex{
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.img-portf{
+    width: 360px;
+    height: 460px;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    transition: .8s;
+    cursor: pointer;
+    border-radius: 50px;
+    position: relative;
+}
+
+.img-portf:hover{
+    background-position: 50% 50%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: #ffffff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+
+}
+
+/* RODAPE */
+
+footer{
+    padding: 50px 4%;
+}
+
+footer .flex{ 
+    justify-content: space-around;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+
+}
+
+.borda{
+    border-top: 5px solid rgb(0, 217, 255);
+}
+
+footer .line-footer p i{
+    color: rgb(0, 0, 0);
+    padding: 0 5px;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1020px){
+    /* classes gerais */
+    .flex{
+        flex-direction: column;
+    }
+
+    .toposite .flex{
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo{
+        font-size: 35px;
+        line-height: 20px;
+    }
+
+    /* cabeçalho */
+    .menu-desktop , .btn-contato{
+        display: none;
+    }
+
+    /* topo do site */
+    
+    section.toposite{
+        padding: 20px 6%;
+    }
+
+    .toposite h1{
+        font-size: 30px;
+    }
+
+    .toposite .img-topo-site img{
+        width: 100%;
+    }
+
+    section.toposite .flex{
+        gap: 40px;
+    }
+
+    /* sobre */
+    section.sobre{
+        padding: 40px 8%;
+    }
+
+    .sobre .txt-sobre h2{
+        font-size: 35px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .btn-social{
+        text-align: center;
+    }
+
+    .img-sobre{
+        width: 100%;
+    }
+
+    /* PORTFOLIO */
+
+    section.portfolio{
+        padding: 80px 8%;
+    }
+
+    .img-portf{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* footer */
+
+    footer .flex{
+        flex-direction: column;
+    }
+
+    footer  .line-footer{
+        text-align: center;
+    }
+    
+}
